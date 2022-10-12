@@ -6,6 +6,7 @@ import Info from './Components/Info/Info';
 import Blog from './Components/Blog/Blog';
 import CoursesDetails from './Components/CoursesDetails/CoursesDetails';
 import Statics from './Components/Statics/Statics';
+import NotFound404 from './Components/NotFound404/NotFound404';
 
 
 function App() {
@@ -54,6 +55,10 @@ function App() {
           },
           element: <CoursesDetails></CoursesDetails>
         },
+        {
+          path: '*',
+          element: <NotFound404></NotFound404>
+        }
        
        
        
