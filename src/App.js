@@ -4,9 +4,9 @@ import Layout from './Layout/Layout';
 import Home from './Components/Home/Home';
 import Info from './Components/Info/Info';
 import Blog from './Components/Blog/Blog';
-import CoursesDetails from './Components/CoursesDetails/CoursesDetails';
 import Statics from './Components/Statics/Statics';
 import NotFound404 from './Components/NotFound404/NotFound404';
+import CourseDetails from './Components/CoursesDetails/CoursesDetails';
 
 
 function App() {
@@ -24,7 +24,14 @@ function App() {
           }
 
         },
-        
+        {
+          path: 'courses',
+          element: <Home></Home>,
+          loader: () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          }
+
+        },
         {
           path: '/',
           element: [<Info key={1111}></Info>,<Home></Home>],
@@ -35,11 +42,6 @@ function App() {
 
         },
         {
-          path: 'blog',
-          element: <Blog></Blog>
-          
-        },
-        {
           path: 'statics',
           loader: () => {
             return fetch('https://openapi.programming-hero.com/api/quiz')
@@ -47,21 +49,22 @@ function App() {
           element: <Statics></Statics>
           
         },
-
+        {
+          path: 'blog',
+          element: <Blog></Blog>
+          
+        },
         {
           path: 'coursedetails/:courseId',
           loader: ({params}) => {
             return fetch(`https://openapi.programming-hero.com/api/quiz/${params.courseId}`)
           },
-          element: <CoursesDetails></CoursesDetails>
+          element: <CourseDetails></CourseDetails>
         },
         {
           path: '*',
           element: <NotFound404></NotFound404>
         }
-       
-       
-       
       ],
 
     }

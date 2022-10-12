@@ -35,11 +35,27 @@ const totalQuiz = getTotal.reduce((pre, curr) => pre + curr, 0);
                     <PieChart width={300} height={250}>
                         <Pie onClick={(e) => console.log(e.target)} data={data01} dataKey="quiz" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
                 
-                        <Pie data={data02} dataKey="quiz" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#FF3346" label />
-                        <Tooltip></Tooltip>
+                        <Pie data={data02} dataKey="quiz" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
                         </PieChart>
-                        <h3 className="fw-bolder text-center"> <FontAwesomeIcon icon={faTicketSimple}></FontAwesomeIcon></h3>
+                        <h3 className="fw-bolder text-center">Total Quiz {totalQuiz}</h3>
                         </div>
+                <div className="col-md-6 col-lg-3 col-sm-12">
+                    <PieChart width={300} height={250}>
+                        <Pie onClick={(e) => console.log(e.target)} data={data01} dataKey="quiz" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
+                
+                        <Pie data={data02} dataKey="quiz" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
+                        </PieChart>
+                        <h3 className="fw-bolder text-center">Total Quiz {totalQuiz}</h3>
+                        </div>
+                <div className="col-md-6 col-lg-3 col-sm-12">
+                    <PieChart width={300} height={250}>
+                        <Pie onClick={(e) => console.log(e.target)} data={data01} dataKey="quiz" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
+                
+                        <Pie data={data02} dataKey="quiz" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
+                        </PieChart>
+                        <h3 className="fw-bolder text-center">Total Quiz {totalQuiz}</h3>
+                        </div>
+                
                     </div>
                 </div>
     );

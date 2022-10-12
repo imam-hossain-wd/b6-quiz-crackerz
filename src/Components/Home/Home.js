@@ -10,8 +10,8 @@ const getQuiz = getQuizData.data;
             
           
             <div className="container text-center py-5">
-                <h2 className='fs-1 fw-bolder'>Courses</h2>
-                <p>Gain Knowledge, Spred it, Make this world more creative</p>
+                <h2 className='fs-1 fw-bolder'>Master in Font-End</h2>
+                <p>Learn with Fun</p>
                 <div className="row mt-5 pt-3">
                     {
                         getQuiz.map(quiz => <Quiz number={getQuiz[quiz]} key={quiz.id} quiz={quiz}></Quiz>)
