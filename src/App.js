@@ -4,6 +4,8 @@ import Layout from './Layout/Layout';
 import Home from './Components/Home/Home';
 import Info from './Components/Info/Info';
 import Blog from './Components/Blog/Blog';
+import CoursesDetails from './Components/CoursesDetails/CoursesDetails';
+import Statics from './Components/Statics/Statics';
 
 
 function App() {
@@ -35,6 +37,22 @@ function App() {
           path: 'blog',
           element: <Blog></Blog>
           
+        },
+        {
+          path: 'statics',
+          loader: () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
+          element: <Statics></Statics>
+          
+        },
+
+        {
+          path: 'coursedetails/:courseId',
+          loader: ({params}) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.courseId}`)
+          },
+          element: <CoursesDetails></CoursesDetails>
         },
        
        
