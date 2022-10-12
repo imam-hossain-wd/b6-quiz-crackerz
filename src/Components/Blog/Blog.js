@@ -2,10 +2,15 @@
 import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 
+const myStyle = {
+  marginTop:"30px",
+  display:'flex',
+  justifyContent:'center',
+}
 
 const Blog = () => {
       return (
-        <div >
+        <div style={myStyle} >
             <Accordion style={{minHeight:'100vh', width:'70%'}}>
           <Accordion.Item eventKey="0">
             <Accordion.Header>what is the prupose of react router</Accordion.Header>
